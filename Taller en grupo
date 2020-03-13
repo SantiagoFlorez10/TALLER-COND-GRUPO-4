@@ -1,0 +1,472 @@
+(define (menu M)
+  (cond
+    ((= M 1) (principal_1))
+    ((= M 2) (principal_2))
+    ((= M 3) (principal_3))
+    ((= M 4) (principal_4))
+    ((= M 5) (principal_5))
+    ((= M 6) (principal_6))
+    ((= M 7) (principal_7))
+    ((= M 8) (principal_8))
+    ((= M 9) (principal_9))
+    ((= M 10) (principal_10))
+    ((= M 11) (principal_11))
+    ((= M 12) (principal_12))
+    ((= M 13) (principal_13))
+    ((= M 14) (principal_14))
+    ((= M 15) (principal_15))
+    ((= M 16) (principal_16))
+    ((= M 17) (principal_17))
+    ((= M 18) (principal_18))
+    ((= M 19) (principal_19))
+    ((= M 20) (principal_20))
+    )
+  )
+    
+    
+    
+  
+
+
+(define (MENU)
+  (displayln"            ¡Bienvenido!")
+  (displayln"_____________________________________")
+  (displayln"Seleccione el ejercicio por ejecutar")
+  (define M (read))
+  (displayln"_____________________________________")
+  (display"Selecciono el ejercicio= ")
+  (displayln M)
+  (displayln"_____________________________________")
+  (displayln"        .....Ejecutando.....")
+  (displayln M)
+  (displayln"_____________________________________")
+  (menu M)
+  )
+
+
+
+
+
+;1
+(define(mayor_2 a b)
+  (cond ((> a b)a)
+        (else b)))
+(define(principal_1)
+  (displayln "Ingrese el primer numero: ")
+  (define a(read))
+  (displayln "Ingrese el segundo numero: ")
+  (define b(read))
+  (mayor_2 a b))
+(principal_1)
+
+
+;2
+(define (mayor a b)
+  (cond ((> a b)(begin
+                 (display b)
+                  (display a)))
+        (else
+         (begin (display a)
+                  (display b)
+                  )
+
+        )))
+(define (principal_2)
+  (mayor (read)(read))
+  )
+  (principal_2)
+
+
+;3
+(define(numero x)
+  (cond((> x 0)"POSITIVO")
+       (else (* x x))))
+(define (principal_3)
+  (displayln "Ingrese un numero: ")
+  (define x(read))
+  (numero x))
+(principal_3)
+
+
+
+
+
+
+
+;4
+(define (descuento x)
+  (cond ((>= x 100000)
+         (begin
+           (display "descuento del 20%: ")
+        (display (* x 0.8))
+           )
+         )
+        (else
+         (begin
+           (display "No hay descuento: ")
+           (display x)
+           )
+         )
+        )
+  )
+
+        (define (principal_4)
+          (display "Ingrese el valor")
+          (define x (read))
+          (descuento x)
+          )
+(principal_4)
+
+
+;5
+(define(camisas x)
+  (cond((>= x 3)(* x(* 20000 0.8)))
+       (else (* x(* 20000 0.9)))))
+(define(principal_5)
+  (displayln "Ingrese la cantidad de camisetas:")
+  (define x (read))
+  (displayln"Su valor a pagar es:")
+  (camisas x)
+  )
+(principal_5)
+
+;6
+
+(define (descuento6 x )
+  (cond
+  ((< x 5) (* x 80000))
+  ((>= x 5) (* x 70000))
+  )
+  )
+
+(define (principal_6)
+  (displayln"Agregue la cantidad de llantas")
+  (define x (read))
+  (descuento6 x)
+  (display"Este es el precio de sus llantas")
+  )
+
+;7
+(define (comparador2 x y)
+  (cond
+    ((= x y)(* x y))
+    ((> x y)(- x y))
+    (else (+ x y))
+    )
+  )
+
+(define (principal_7)
+  (displayln"Agregue el primer numero")
+  (define x (read))
+  (displayln"Agregue el segundo numero")
+  (define y (read))
+  (comparador2 x y)
+  )
+
+
+
+
+
+
+
+
+
+
+
+;8
+(define(mayor_3 x y z)
+  (cond ((> x y)(cond
+                  ((> x z)x)
+                  (z)))                  
+        ((> y z)y)
+        (z)))
+       
+(define(principal_8)
+  (displayln "Ingrese el primer numero: ")
+  (define x(read))
+  (displayln "Ingrese el segundo numero: ")
+  (define y(read))
+  (displayln "Ingrese el tercer numero: ")
+  (define z(read))
+  (mayor_3 x y z))
+(principal_8)
+
+;9
+(define (mostrar n e s m)
+  (cond ((and (> e 18)(= m 1))
+         (begin
+           (displayln n)
+           (displayln e)
+           (cond ((= s 1)(displayln "Mujer")))
+           (cond ((= s 2)(displayln "Hombre")))
+           (cond ((= m 1)(displayln "Solter@")))
+           (cond ((= m 2)(displayln "Casad@")))
+           )
+         )
+        )
+  )
+(define (principal_9)
+  (display "Ingrese su nombre")
+  (define n (read))
+  (display "Ingrese su edad")
+  (define e (read))
+  (display "Ingrese su sexo (1 para mujer, 2 para hombre)")
+  (define s (read))
+  (display "Ingrese el estado civil (1 si es solter@, 2 si es casad@)" )
+  (define m (read))
+  (mostrar n e s m)
+  )
+(principal_9)
+
+
+;11
+(define (edad e)
+  (cond
+    ((= e 1) (display"Selecciono Adulto"))
+    ((= e 2) (display"Selecciono Joven"))
+    ((= e 3) (display"Selecciono Niño"))
+    )
+  )
+
+(define (principal_11)
+  (displayln"Es usted Adulto joven o niño?
+Adulto=1
+Joven=2
+Niño=3")
+  (define e (read))
+  (edad e)
+  )
+
+(principal_11)
+
+;12
+(define(cuota x)
+  (cond ((< x 500000)(- x(* x 0.03)))
+        ((>= x 500000)(- x(* x 0.02)))))
+(define(principal_12)
+  (displayln "Ingrese el monto: ")
+  (define x (read))
+  (display "Su monto a pagar es: ")
+  (cuota x))
+(principal_12)
+
+;13
+(define (pago ni n p e)
+  (cond ((and (> p 2000000)(> e 3))
+         (begin
+           (displayln n)
+           (display "Numero de inscripcion: ")
+           (displayln ni)
+           (display "Pago de  matricula: " )
+           (display (+ (+ (* p 0.03)p )500000))
+           )
+         )
+        (else
+         (displayln n)
+         (display "Numero de inscripcion: ")
+         (displayln ni)
+         (display "Pago de  matricula: " )
+         (display (+ p 500000)
+                  )
+         )
+        )
+  )
+(define (principal_13)
+  (displayln "Ingrese el numero de inscripcion ")
+  (define ni (read))
+  (displayln "Ingerse su nombre ")
+  (define n (read))
+  (displayln "Ingrese su patrinomio ")
+  (define p (read))
+  (displayln "Ingrese el estrato" )
+  (define e (read))
+  (pago ni n p e)
+  )
+(principal_13)
+
+
+;14
+(define (descuento e)
+(cond ((and(>= e 1)(<= e 2))(+ 80000(* 80000 0.05)))
+        ((and(>= e 3)(<= e 4))(+ 80000(* 80000 0.10)))
+        ((and(>= e 5)(<= e 6))(+ 80000(* 80000 0.20)))
+        )
+  )
+;(descuento (read))
+        
+(define (principal_14 n d e )
+  (displayln n)
+  (displayln d)
+  (display "su estrato es: ")
+  (displayln e)
+  (descuento e)
+  )
+(principal_14 (read)(read)(read))
+
+;15
+(define (descuento m p)
+  (cond
+    ((= m 1)(cond 
+              ((>= p 1000000) (* p 0.85))
+              ((<  p 1000000) (* p 1.1))))
+    ((= m 0) (cond
+               ((>= p 1000000) (* p 0.90))
+               ((<  p 1000000) (* p 0.84))))
+                
+   
+      )
+  )
+  
+  
+  
+(descuento 0 2000000)
+    
+  (define (principal_15)
+    (displayln"Su computador es modelo ABACO?
+0=no 1=si")
+    (define m (read))
+    (displayln "Agregue el precio de su computador")
+    (define p (read))
+    (display"Este es el precio de su computador")
+    (displayln (descuento m p))
+    )
+    
+
+
+(principal_15)
+
+
+
+
+
+;16
+(define(horas x)
+  (cond ((> x 48)
+        (cond((<(- x 48)8)(* (- x 48)(* 2 4000)))
+                       ((>=(- x 48)8)(+(*(- x 48)(* 2 4000))(*(-(- x 48)8)(* 3 4000))))))))
+(define(principal_16)
+  (displayln "Ingrese las horas que trabajo: ")
+  (define x(read))
+  (display "Su paga es: ")
+  (horas x))
+(principal_16)
+
+
+
+
+
+
+
+
+
+
+;17
+(define (descuento x y)
+  (cond ((<= x 2)
+         (begin
+           (displayln "No hay descuento")
+           (display (* x y))
+           )
+         ))
+  (cond ((and (>= x 3)(<= x 5))
+         (begin
+           (displayln "Descuento del 10%")
+           (display (* (* x y)0.1))
+           )
+         )
+        )
+  (cond ((and (>= x 6)(<= x 10))
+         (begin
+           (displayln "Descuento del 15%")
+           (display (* (* x y)0.15))
+           )
+         )
+        )
+  (cond ((>= x 11)
+         (begin
+           (displayln "Descuento del 18%")
+           (display (* (* x y)0.18))
+           )
+         )
+        )
+  )              
+(define (principal_17)
+  (displayln "Ingrese la cantidad de peras compradas ")
+  (define x (read))
+  (display "Ingrese el valor de una pera ")
+  (define d (read))
+  (descuento x d)
+  )
+(principal_17)
+
+
+;18
+(define(principal_18  x)
+  (cond ((< x 1)(display "la utilidad es del 5% "))
+        ((and(> x 1)(< x 2))(display "la utilidad es del 7% "))
+        ((and(> x 2)(< x 5))(display "la utilidad es del 10% "))
+        ((and(> x 5)(< x 10))(display "la utilidad es del 15 % "))
+        ((> x 10)(display " la utilidad es del 20% "))
+        )
+  )
+(principal_18 (read))
+
+;19
+(define (descuento l)
+  (cond
+    ( (= l 5) (* l 30000))
+    ( (and(> l 5)(<= l 10)) (* l 25000))
+    (else (* l 20000))
+    )
+  )
+    
+    
+ (define (principal_19)
+  (displayln"_______________________________")
+  (displayln "Agregue el numero de llantas")
+  (define l (read))
+  (displayln"Este es el precio de sus llantas ")
+  (displayln (descuento l))
+  (displayln"_______________________________")
+  )
+;20
+(define (mostrar e s t n v)
+  (cond ((and(>= e 35)(<= e 45))
+         (cond ((and(= s 2)(= t 1))
+        
+         (begin
+           (* 3 v))))))
+  (cond((and(<= e 30)(= s 1))
+       (cond((and(= n 1)(= t 3))
+             (begin
+               (/ v 3))))))
+  (cond((and(> e 55)(= s 2))
+            (cond((= n 3)
+                  (begin
+                    (- v 50000)))))))
+
+          
+           
+        
+
+(define (principal_20)
+  (displayln "Ingrese su edad")
+  (define e (read))
+  (displayln "Ingrese su sexo (1 para hombre, 2 para mujer)")
+  (define s (read))
+  (displayln "Ingrese su estatura (1 alto, 2 bajo, 3 medio)" )
+  (define t (read))
+  (displayln "Ingrese su nacionalidad (1=latino,2=aleman,3=hindu,4=colombiano)")
+  (define n (read))
+  (displayln "Ingrese el valor")
+  (define v (read))
+  (mostrar e s t n v))
+(principal_20)
+
+
+
+
+
+
+
+(MENU)
